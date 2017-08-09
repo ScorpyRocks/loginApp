@@ -21,8 +21,17 @@ export class LoginComponentComponent implements OnInit {
   ngOnInit() {
   }
   
+  onLogin(event:Event){
+    console.log(event);
+    this.loginName = (<HTMLInputElement>event.target).value;
+    
+  }
   onClick(){
   alert('Hi');
+  if(this.loginName==null && this.loginPassword==null)
+    {
+      alert('Please enter username and password!')
+    }
   }
 
 }

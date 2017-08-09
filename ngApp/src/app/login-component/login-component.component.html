@@ -5,12 +5,13 @@
 Welcome {{loginName}}
 <br>
 <label for="lblName">Name:</label>
-<input [(ngModel)]="loginName" type="text"/>
+<!--<input [(ngModel)]="loginName" type="text"/>-->
+<input (input)="onLogin($event)" type="text"/>
 <br>
 <label for="lblPassword">Password:</label>
 <input type="Password"/>
 <br>
-<input type="button" value="Submit"/>
+<input type="button" value="Submit" (click)="onClick()"/>
 
 
 
